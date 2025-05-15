@@ -2,7 +2,6 @@
 
 move_x = keyboard_check(vk_right) - keyboard_check(vk_left);
 move_x *= move_speed;
-var jump_pressed = keyboard_check_pressed(vk_up);	
 
 // ************ COLLISION CHECKS ************
 
@@ -23,10 +22,11 @@ if place_meeting(x, y-2, obj_solid) { // If hitting a ceiling
 
 
 // Gravity & Jumping
-	if (is_grounded && jump_pressed) {
-		move_y = jump_speed;
+	
+	if (place_meeting(x, y+2, ground_object)) {
+    move_y = jump_speed; // Auto-jump when landing
 	}
-
+	
 	else if (!is_grounded && move_y < max_fall_speed) { // Keep a reasonable fall speed
 		move_y += gravity_force; // Gravity pulls down
 		
@@ -47,21 +47,47 @@ if !is_grounded {
 move_and_collide(move_x, move_y, obj_solid);
 
 
+
+
+
 // ************ OUTSIDE ROOM ************
 
-if (x < -20 || x > room_width + 20 || y > room_height + 500 || y < -500) {
-	room_restart(); // Restart the room if outside the boundaries we set
+
+if (y > room_height + 100) {
+	room_restart()
 }
+
+if (x < 0) {
+    x = room_width;
+	sprite_index = spr_appearing;
+    alarm[0] = 15;
+	
+}
+
+
+if (x > room_width) {
+    x = 0;
+	sprite_index = spr_appearing;
+    alarm[0] = 15;
+}
+
+
 
 
 // ************ SPRITE FACING LEFT/RIGHT ************
 
-if keyboard_check(vk_left) {
-    image_xscale = -1; // Face left
-    sprite_index = spr_player_walk; // Walking sprite
-} else if keyboard_check(vk_right) {
-    image_xscale = 1; // Face right
-    sprite_index = spr_player_walk; // Walking sprite
-} else {
-    sprite_index = spr_player_idle; // Idle sprite when no key is pressed
+if alarm[0] <= 0 { // Only set movement sprites if NOT teleporting
+    if keyboard_check(vk_left) {
+        image_xscale = -1;
+        sprite_index = spr_player_walk;
+    } else if keyboard_check(vk_right) {
+        image_xscale = 1;
+        sprite_index = spr_player_walk;
+    } else {
+        sprite_index = spr_player_idle;
+    }
 }
+
+
+
+global.game_score = round(max(global.game_score, room_height - y));

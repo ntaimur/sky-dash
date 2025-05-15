@@ -16,9 +16,14 @@ is_grounded = false;			// On ground?
 
 
 
+
 // ************ OBJECT REFERENCES ************
 
 ground_object = obj_solid;		
 
 
-window_set_fullscreen(true)
+
+// ************ GAME STUFF ************
+
+global.game_score = 0
+
