@@ -4,10 +4,13 @@
   "name": "sky-dash",
   "resources": [
     {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"order":1,},
+    {"id":{"name":"obj_grav_power_up_icon","path":"objects/obj_grav_power_up_icon/obj_grav_power_up_icon.yy",},"order":7,},
+    {"id":{"name":"spr_grav","path":"sprites/spr_grav/spr_grav.yy",},"order":5,},
     {"id":{"name":"spr_appearing","path":"sprites/spr_appearing/spr_appearing.yy",},"order":3,},
     {"id":{"name":"spr_player_walk","path":"sprites/spr_player_walk/spr_player_walk.yy",},"order":1,},
     {"id":{"name":"obj_ground_solid","path":"objects/obj_ground_solid/obj_ground_solid.yy",},"order":4,},
     {"id":{"name":"obj_background_space","path":"objects/obj_background_space/obj_background_space.yy",},"order":5,},
+    {"id":{"name":"obj_grav_powerup","path":"objects/obj_grav_powerup/obj_grav_powerup.yy",},"order":6,},
     {"id":{"name":"obj_ground_fading","path":"objects/obj_ground_fading/obj_ground_fading.yy",},"order":2,},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},"order":2,},
     {"id":{"name":"obj_game_manager","path":"objects/obj_game_manager/obj_game_manager.yy",},"order":3,},

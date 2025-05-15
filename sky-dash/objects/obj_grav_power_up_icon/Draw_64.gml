@@ -1,0 +1,6 @@
+if global.gravity_power_active {
+	draw_set_alpha(icon_alpha);
+	draw_sprite(spr_grav, 1, 225, 25);
+}
+
+draw_set_alpha(1)

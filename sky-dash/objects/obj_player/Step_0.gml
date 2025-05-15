@@ -91,3 +91,7 @@ if alarm[0] <= 0 { // Only set movement sprites if NOT teleporting
 
 
 global.game_score = round(max(global.game_score, room_height - y));
+
+if !global.gravity_power_active {
+	gravity_force = 0.5;	
+}
