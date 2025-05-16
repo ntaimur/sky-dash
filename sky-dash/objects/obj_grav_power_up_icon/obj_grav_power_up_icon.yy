@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_grav_power_up_icon",
   "spriteId": {
-    "name": "spr_grav",
-    "path": "sprites/spr_grav/spr_grav.yy",
+    "name": "spr_low_grav_icon",
+    "path": "sprites/spr_low_grav_icon/spr_low_grav_icon.yy",
   },
   "solid": false,
   "visible": true,

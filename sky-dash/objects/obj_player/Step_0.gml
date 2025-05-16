@@ -76,17 +76,27 @@ if (x > room_width) {
 
 // ************ SPRITE FACING LEFT/RIGHT ************
 
+
+
+
 if alarm[0] <= 0 { // Only set movement sprites if NOT teleporting
     if keyboard_check(vk_left) {
         image_xscale = -1;
-        sprite_index = spr_player_walk;
     } else if keyboard_check(vk_right) {
         image_xscale = 1;
-        sprite_index = spr_player_walk;
-    } else {
-        sprite_index = spr_player_idle;
-    }
+    } 
 }
+
+if alarm[0] <= 0 { // Only set movement sprites if NOT teleporting
+	if (move_y >= 0) {
+		sprite_index = spr_player_fall
+	}
+	if (move_y <= 0) {
+	sprite_index = spr_player_jump
+	}
+}
+
+
 
 
 
@@ -95,3 +105,6 @@ global.game_score = round(max(global.game_score, room_height - y));
 if !global.gravity_power_active {
 	gravity_force = 0.5;	
 }
+
+
+
