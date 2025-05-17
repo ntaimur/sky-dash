@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_background_clouds",
   "spriteId": {
-    "name": "_8689844",
-    "path": "sprites/_8689844/_8689844.yy",
+    "name": "spr_back_ground_clouds",
+    "path": "sprites/spr_back_ground_clouds/spr_back_ground_clouds.yy",
   },
   "solid": false,
   "visible": true,
