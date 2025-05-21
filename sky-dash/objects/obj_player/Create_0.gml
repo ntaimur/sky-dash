@@ -28,3 +28,4 @@ ground_object = obj_solid;
 global.game_score = 0
 
 
+

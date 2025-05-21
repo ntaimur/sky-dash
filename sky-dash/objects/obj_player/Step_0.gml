@@ -24,7 +24,7 @@ if place_meeting(x, y-2, obj_solid) { // If hitting a ceiling
 // Gravity & Jumping
 	
 	if (place_meeting(x, y+2, ground_object)) {
-    move_y = jump_speed; // Auto-jump when landing
+		move_y = jump_speed; // Auto-jump when landing
 	}
 	
 	else if (!is_grounded && move_y < max_fall_speed) { // Keep a reasonable fall speed
@@ -107,4 +107,10 @@ if !global.gravity_power_active {
 }
 
 
+if global.jet_powerup {
+	gravity_force = -0.1;
+	
+}
 
+
+      

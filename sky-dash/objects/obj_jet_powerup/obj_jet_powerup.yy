@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_player",
+  "name": "obj_jet_powerup",
   "spriteId": {
-    "name": "spr_player_walk",
-    "path": "sprites/spr_player_walk/spr_player_walk.yy",
+    "name": "spr_jetpack",
+    "path": "sprites/spr_jetpack/spr_jetpack.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,10 +26,6 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_grav_powerup","path":"objects/obj_grav_powerup/obj_grav_powerup.yy",},},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_jet_powerup","path":"objects/obj_jet_powerup/obj_jet_powerup.yy",},},
   ],
   "properties": [],
   "overriddenProperties": [],
