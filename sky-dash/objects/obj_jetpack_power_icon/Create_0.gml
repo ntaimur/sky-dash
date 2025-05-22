@@ -1,0 +1,1 @@
+icon_alpha = 1;

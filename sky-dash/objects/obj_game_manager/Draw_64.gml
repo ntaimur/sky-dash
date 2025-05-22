@@ -1,5 +1,5 @@
 
-
+draw_set_font(Font1)
 draw_set_color(c_white); // Set text color
 
 if (room != rm_start) {

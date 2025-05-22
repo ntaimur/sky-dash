@@ -22,16 +22,18 @@ if place_meeting(x, y-2, obj_solid) { // If hitting a ceiling
 
 
 // Gravity & Jumping
+
+	
 	
 	if (place_meeting(x, y+2, ground_object)) {
 		move_y = jump_speed; // Auto-jump when landing
+		
 	}
 	
 	else if (!is_grounded && move_y < max_fall_speed) { // Keep a reasonable fall speed
 		move_y += gravity_force; // Gravity pulls down
 		
 	}
-	
 
 
 
@@ -79,7 +81,7 @@ if (x > room_width) {
 
 
 
-if alarm[0] <= 0 { // Only set movement sprites if NOT teleporting
+if (alarm[0] <= 0) { // Only set movement sprites if NOT teleporting
     if keyboard_check(vk_left) {
         image_xscale = -1;
     } else if keyboard_check(vk_right) {
@@ -87,7 +89,7 @@ if alarm[0] <= 0 { // Only set movement sprites if NOT teleporting
     } 
 }
 
-if alarm[0] <= 0 { // Only set movement sprites if NOT teleporting
+if (alarm[0] <= 0 && !global.jet_powerup) { // Only set movement sprites if NOT teleporting
 	if (move_y >= 0) {
 		sprite_index = spr_player_fall
 	}
@@ -108,7 +110,7 @@ if !global.gravity_power_active {
 
 
 if global.jet_powerup {
-	gravity_force = -0.1;
+	gravity_force = -0.05;
 	
 }
 
