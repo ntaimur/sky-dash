@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_solid",
-    "path": "objects/obj_solid/obj_solid.yy",
+    "name": "obj_auto_jump",
+    "path": "objects/obj_auto_jump/obj_auto_jump.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

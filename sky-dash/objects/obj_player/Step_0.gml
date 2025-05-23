@@ -1,4 +1,4 @@
-// ************ INPUT ************
+ // ************ INPUT ************
 
 move_x = keyboard_check(vk_right) - keyboard_check(vk_left);
 move_x *= move_speed;
@@ -25,7 +25,8 @@ if place_meeting(x, y-2, obj_solid) { // If hitting a ceiling
 
 	
 	
-	if (place_meeting(x, y+2, ground_object)) {
+
+	if (place_meeting(x, y+2, obj_auto_jump)) {
 		move_y = jump_speed; // Auto-jump when landing
 		
 	}
