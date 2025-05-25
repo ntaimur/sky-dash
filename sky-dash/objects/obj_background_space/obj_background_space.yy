@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_background_space",
   "spriteId": {
-    "name": "spr_background",
-    "path": "sprites/spr_background/spr_background.yy",
+    "name": "spr_background_space",
+    "path": "sprites/spr_background_space/spr_background_space.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "background",
+    "path": "folders/Objects/background.yy",
   },
 }

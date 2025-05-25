@@ -1,1 +1,1 @@
-room = rm_level_1;
+room = rm_story;
