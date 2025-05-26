@@ -1,1 +1,1 @@
-show_debug_message(global.story_level);
+room = rm_level_1;

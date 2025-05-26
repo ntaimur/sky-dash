@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_to_move_instructions",
-  "spriteId": {
-    "name": "spr_to_move",
-    "path": "sprites/spr_to_move/spr_to_move.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
