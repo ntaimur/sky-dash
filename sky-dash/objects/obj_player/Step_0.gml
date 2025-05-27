@@ -41,7 +41,7 @@ if place_meeting(x, y-2, obj_solid) { // If hitting a ceiling
 // Fixing player slowed down in air
 
 if !is_grounded {
-    move_x *= 2; // 
+    move_x *= 2; //
 }
 
 
