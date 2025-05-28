@@ -48,6 +48,7 @@
     {"id":{"name":"obj_ground_moving","path":"objects/obj_ground_moving/obj_ground_moving.yy",},"order":1,},
     {"id":{"name":"spr_start_button2","path":"sprites/spr_start_button2/spr_start_button2.yy",},"order":12,},
     {"id":{"name":"obj_jet_powerup","path":"objects/obj_jet_powerup/obj_jet_powerup.yy",},"order":2,},
+    {"id":{"name":"spr_move_instructions27","path":"sprites/spr_move_instructions27/spr_move_instructions27.yy",},"order":29,},
     {"id":{"name":"spr_move_instructions","path":"sprites/spr_move_instructions/spr_move_instructions.yy",},"order":28,},
     {"id":{"name":"spr_story_text2","path":"sprites/spr_story_text2/spr_story_text2.yy",},"order":25,},
     {"id":{"name":"spr_story_text3","path":"sprites/spr_story_text3/spr_story_text3.yy",},"order":26,},
