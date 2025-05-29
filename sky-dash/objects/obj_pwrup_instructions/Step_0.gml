@@ -1,5 +1,5 @@
 
-if (distance_to_object(obj_player) < 200) {
+if (distance_to_object(obj_player) < 100) {
 	start_fade = true;
 }
 
