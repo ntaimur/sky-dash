@@ -16,7 +16,13 @@ if place_meeting(x, y-2, obj_solid) { // If hitting a ceiling
     move_y = 0; // Stop upward movement
 }
 
+if global.jet_powerup {  // Stopping the bug that launches player with jetpack
+	jump_speed = -2;	
+}
 
+else {
+	jump_speed = -15;		
+}
 
 // ************ MOVEMENT ************
 
@@ -24,9 +30,8 @@ if place_meeting(x, y-2, obj_solid) { // If hitting a ceiling
 // Gravity & Jumping
 
 	
-	
 
-	if (place_meeting(x, y+2, obj_auto_jump)) {
+	if (is_grounded) {
 		move_y = jump_speed; // Auto-jump when landing
 		
 	}
@@ -114,6 +119,7 @@ if global.jet_powerup {
 	gravity_force = -0.05;
 	
 }
+
 
 
       
