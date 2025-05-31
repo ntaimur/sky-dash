@@ -5,3 +5,5 @@ if (x >= room_width - 50) {
 } else if (x <= 50) {
 	move_direc = 2;	
 }
+
+

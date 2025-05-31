@@ -1,19 +1,19 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_bird",
+  "name": "obj_ground_space_moving",
   "spriteId": {
-    "name": "spr_bird",
-    "path": "sprites/spr_bird/spr_bird.yy",
+    "name": "spr_space_platform",
+    "path": "sprites/spr_space_platform/spr_space_platform.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_obstacle",
-    "path": "objects/obj_obstacle/obj_obstacle.yy",
+    "name": "obj_ground_moving",
+    "path": "objects/obj_ground_moving/obj_ground_moving.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -27,10 +27,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

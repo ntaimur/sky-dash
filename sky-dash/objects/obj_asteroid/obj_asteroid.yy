@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_bird",
+  "name": "obj_asteroid",
   "spriteId": {
-    "name": "spr_bird",
-    "path": "sprites/spr_bird/spr_bird.yy",
+    "name": "spr_asteroid",
+    "path": "sprites/spr_asteroid/spr_asteroid.yy",
   },
   "solid": false,
   "visible": true,

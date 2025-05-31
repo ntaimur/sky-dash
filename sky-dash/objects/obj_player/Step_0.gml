@@ -11,6 +11,10 @@ is_grounded = place_meeting(x, y+2, ground_object);
 
 
 
+
+
+
+
 // This is for the bug when the player sticks to the ceiling.
 if place_meeting(x, y-2, obj_solid) { // If hitting a ceiling
     move_y = 0; // Stop upward movement
@@ -53,10 +57,6 @@ if !is_grounded {
 // ************ MOVE THE PLAYER ************
 
 move_and_collide(move_x, move_y, obj_solid);
-
-
-
-
 
 // ************ OUTSIDE ROOM ************
 
@@ -123,8 +123,8 @@ if global.jet_powerup {
 // ************ CHECKPOINTS ************
 
 if (global.checkpoint_level == 1 && y > 4000) {
-	x = 158; 
-	y = 3710;
+	x = cp_x;
+	y = cp_y;
 }	
 
 

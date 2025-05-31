@@ -1,11 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_checkpoint1",
-  "spriteId": {
-    "name": "spr_checkpoints",
-    "path": "sprites/spr_checkpoints/spr_checkpoints.yy",
-  },
+  "name": "obj_obstacle",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -24,13 +21,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "checkpoints",
-    "path": "folders/Objects/checkpoints.yy",
+    "name": "function",
+    "path": "folders/Objects/function.yy",
   },
 }
