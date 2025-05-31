@@ -26,6 +26,9 @@ ground_object = obj_solid;
 // ************ GAME STUFF ************
 
 global.game_score = 0
+global.checkpoint_level = 0;
+show_checkpoint = false;
+checkpoint_alpha = 1;
 
 
 

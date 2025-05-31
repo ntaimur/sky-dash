@@ -120,6 +120,12 @@ if global.jet_powerup {
 	
 }
 
+// ************ CHECKPOINTS ************
+
+if (global.checkpoint_level == 1 && y > 4000) {
+	x = 158; 
+	y = 3710;
+}	
 
 
       
