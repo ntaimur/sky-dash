@@ -30,7 +30,7 @@ global.checkpoint_level = 0;
 show_checkpoint = false;
 checkpoint_alpha = 1;
 cp_x = 156;
-cp_y = 9920;
+cp_y = 19936;
 
 
 

@@ -122,7 +122,7 @@ if global.jet_powerup {
 
 // ************ CHECKPOINTS ************
 
-if (global.checkpoint_level == 1 && y > 4000) {
+if (global.checkpoint_level == 1 && y > 14000) {
 	x = cp_x;
 	y = cp_y;
 }	
