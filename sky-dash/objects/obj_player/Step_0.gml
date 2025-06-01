@@ -54,7 +54,11 @@ if !is_grounded {
 }
 
 
+
+
 // ************ MOVE THE PLAYER ************
+
+
 
 move_and_collide(move_x, move_y, obj_solid);
 
@@ -95,7 +99,7 @@ if (alarm[0] <= 0) { // Only set movement sprites if NOT teleporting
     } 
 }
 
-if (alarm[0] <= 0 && !global.jet_powerup) { // Only set movement sprites if NOT teleporting
+if (alarm[0] <= 0 && !global.jet_powerup && !global.ship_pwr) { // Only set movement sprites if NOT teleporting
 	if (move_y >= 0) {
 		sprite_index = spr_player_fall
 	}
@@ -120,6 +124,11 @@ if global.jet_powerup {
 	
 }
 
+if global.ship_pwr {
+	gravity_force = -0.05;
+	
+}
+
 // ************ CHECKPOINTS ************
 
 if (global.checkpoint_level == 1 && y > 14000) {
@@ -127,5 +136,9 @@ if (global.checkpoint_level == 1 && y > 14000) {
 	y = cp_y;
 }	
 
+if (global.checkpoint_level == 2 && y > 8400) {
+	x = cp_x;
+	y = cp_y;
+}	
 
       

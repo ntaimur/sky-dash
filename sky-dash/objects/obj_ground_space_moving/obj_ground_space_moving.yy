@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_ground_space_moving",
   "spriteId": {
-    "name": "spr_space_platform",
-    "path": "sprites/spr_space_platform/spr_space_platform.yy",
+    "name": "spr_space_platform_moving",
+    "path": "sprites/spr_space_platform_moving/spr_space_platform_moving.yy",
   },
   "solid": true,
   "visible": true,
