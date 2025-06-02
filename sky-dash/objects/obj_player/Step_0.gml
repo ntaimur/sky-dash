@@ -36,7 +36,9 @@ else {
 	
 
 	if (is_grounded) {
+		if (!audio_is_playing(sd_jump)) {
 		audio_play_sound(sd_jump, 1, false);
+		}
 		move_y = jump_speed; // Auto-jump when landing
 		
 	}
@@ -67,12 +69,14 @@ move_and_collide(move_x, move_y, obj_solid);
 
 
 if (y > room_height + 100) {
+	audio_play_sound(sd_hit, 1, false);
 	room_restart()
 	y = cp_y
 	x = cp_x
 }
 
 if (x < 0) {
+	audio_play_sound(sd_warp, 1, false);
     x = room_width;
 	sprite_index = spr_appearing;
     alarm[0] = 15;
@@ -81,6 +85,7 @@ if (x < 0) {
 
 
 if (x > room_width) {
+	audio_play_sound(sd_warp, 1, false);
     x = 0;
 	sprite_index = spr_appearing;
     alarm[0] = 15;
@@ -130,38 +135,41 @@ if global.jet_powerup {
 	gravity_force = -0.05;
 	if (!audio_is_playing(sd_jetpack)) {
     audio_play_sound(sd_jetpack, 1, false);
-}
-
-	
+} 
 }
 
 if global.ship_pwr {
 	move_y = -10;
-
-	
+	if (!audio_is_playing(sd_jetpack)) {
+    audio_play_sound(sd_jetpack, 1, false);
+	}
 }
 
 // ************ CHECKPOINTS ************
 
 if (global.checkpoint_level == 1 && y > 14000) {
+	audio_play_sound(sd_hit, 1, false);
 	room_restart();
 	x = cp_x;
 	y = cp_y;
 }	
 
 if (global.checkpoint_level == 2 && y > 8400) {
+	audio_play_sound(sd_hit, 1, false);
 	room_restart();
 	x = cp_x;
 	y = cp_y;
 }	
 
 if (global.checkpoint_level == 2 && y > 8400) {
+	audio_play_sound(sd_hit, 1, false);
 	room_restart();
 	x = cp_x;
 	y = cp_y;
 }	
 
 if (global.checkpoint_level == 3 && y > 4444) {
+	audio_play_sound(sd_hit, 1, false);
 	room_restart();
 	x = cp_x;
 	y = cp_y;
@@ -195,7 +203,7 @@ if global.is_paused { // Game pause mechanic.
       
 	  
 if global.test {
-	game_restart();	
+	game_restart();
 }
 	  
 	  
@@ -214,4 +222,8 @@ if (distance_to_object(obj_comet || obj_asteroid) < 250) {
 	}
 }
 	  
-
+if (distance_to_object(obj_ground_moving) < 250) {
+	if (!audio_is_playing(sd_jetpack)) {
+    audio_play_sound(sd_jetpack, 1, false);
+	}
+}
