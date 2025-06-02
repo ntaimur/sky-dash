@@ -36,6 +36,7 @@ else {
 	
 
 	if (is_grounded) {
+		audio_play_sound(sd_jump, 1, false);
 		move_y = jump_speed; // Auto-jump when landing
 		
 	}
@@ -120,14 +121,23 @@ if !global.gravity_power_active {
 	gravity_force = 0.5;	
 }
 
+if global.gravity_power_active {
+
+
+}
 
 if global.jet_powerup {
 	gravity_force = -0.05;
+	if (!audio_is_playing(sd_jetpack)) {
+    audio_play_sound(sd_jetpack, 1, false);
+}
+
 	
 }
 
 if global.ship_pwr {
 	move_y = -10;
+
 	
 }
 
@@ -188,5 +198,20 @@ if global.test {
 	game_restart();	
 }
 	  
+	  
+// SFX
+
+if (distance_to_object(obj_bird) < 250) {
+	if (!audio_is_playing(sd_bird)) {
+    audio_play_sound(sd_bird, 1, false);
+	}
+}
+
+
+if (distance_to_object(obj_comet || obj_asteroid) < 250) {
+	if (!audio_is_playing(sd_comet)) {
+    audio_play_sound(sd_comet, 1, false);
+	}
+}
 	  
 
