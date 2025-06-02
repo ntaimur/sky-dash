@@ -9,3 +9,7 @@ if is_fading {
         instance_destroy(); // Remove the platform when fully faded
     }
 }
+
+if global.game_over {
+	instance_destroy();
+}

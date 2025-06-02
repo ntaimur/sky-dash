@@ -3,3 +3,8 @@ if place_meeting(x, y + 5, obj_player) {
 		instance_destroy();
 	}
 }
+
+
+if global.game_over {
+	instance_destroy();
+}

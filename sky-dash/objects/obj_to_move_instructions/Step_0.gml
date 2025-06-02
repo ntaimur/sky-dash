@@ -10,3 +10,7 @@ if image_alpha <= 0 {
 if start_fade {
 	image_alpha -= 0.005;	
 }
+
+if global.game_over {
+	instance_destroy();
+}

@@ -32,6 +32,9 @@ checkpoint_alpha = 1;
 cp_x = 156;
 cp_y = 19936;
 
+global.game_over = false;
+end_alpha = 0;
+
 
 
 

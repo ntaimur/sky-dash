@@ -7,3 +7,7 @@ if (x >= room_width + 600) {
 	move_direc = 6;
 	image_xscale = -1;
 }
+
+if global.game_over {
+	instance_destroy();
+}

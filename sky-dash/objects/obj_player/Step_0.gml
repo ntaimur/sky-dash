@@ -125,20 +125,62 @@ if global.jet_powerup {
 }
 
 if global.ship_pwr {
-	gravity_force = -0.05;
+	move_y = -10;
 	
 }
 
 // ************ CHECKPOINTS ************
 
 if (global.checkpoint_level == 1 && y > 14000) {
+	room_restart();
 	x = cp_x;
 	y = cp_y;
 }	
 
 if (global.checkpoint_level == 2 && y > 8400) {
+	room_restart();
 	x = cp_x;
 	y = cp_y;
 }	
 
+if (global.checkpoint_level == 2 && y > 8400) {
+	room_restart();
+	x = cp_x;
+	y = cp_y;
+}	
+
+if (global.checkpoint_level == 3 && y > 4444) {
+	room_restart();
+	x = cp_x;
+	y = cp_y;
+}	
+
+
+if (global.checkpoint_level == 4) {
+	global.game_over = true;	
+	
+}
+
+
+// Game Pause
+
+if global.is_paused { // Game pause mechanic.
+	move_y = 0;
+	move_x = 0;
+	gravity_force = 0;
+	move_speed = 0;
+	
+} else {
+	move_speed = 2.5;
+	if global.gravity_power_active {
+		gravity_force = 0.25;
+	} else if (global.jet_powerup)  {
+		gravity_force = -0.05;
+	}	else {
+		gravity_force = 0.5;	
+	}
+}
       
+	  
+	  
+

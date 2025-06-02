@@ -1,0 +1,1 @@
+real_sprite = spr_restart_icon;
