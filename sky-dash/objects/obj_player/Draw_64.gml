@@ -11,8 +11,3 @@ if (checkpoint_alpha <= 0) {
 	checkpoint_alpha = 1;
 }
 
-if global.game_over {
-	draw_set_alpha(end_alpha)
-	end_alpha =+ 0.0001;
-	draw_sprite(spr_room_cover, 0, 0, 0)
-}

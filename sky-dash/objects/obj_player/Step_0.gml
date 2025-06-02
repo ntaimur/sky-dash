@@ -67,6 +67,8 @@ move_and_collide(move_x, move_y, obj_solid);
 
 if (y > room_height + 100) {
 	room_restart()
+	y = cp_y
+	x = cp_x
 }
 
 if (x < 0) {
@@ -181,6 +183,10 @@ if global.is_paused { // Game pause mechanic.
 	}
 }
       
+	  
+if global.test {
+	game_restart();	
+}
 	  
 	  
 
